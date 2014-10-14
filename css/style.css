@@ -17,6 +17,8 @@ img {max-width: 350px;}
 
 .fa-youtube {color: #bb0000 !important;}
 
+.fa-envelope {color: #32506d !important;}
+
 button, textarea, input {
   border: none;
   overflow: auto;
