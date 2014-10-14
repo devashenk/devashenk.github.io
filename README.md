@@ -1,4 +1,4 @@
 devashenk.github.io
 ===================
 
-Personal site for Dennis Evashenk
+Personal site for Dennis Evashenk.
