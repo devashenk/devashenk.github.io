@@ -9,6 +9,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 ul {
   list-style: none; }
 
+ img {max-width: 350px;} 
+
 button, textarea, input {
   border: none;
   overflow: auto;
