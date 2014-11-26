@@ -37,7 +37,7 @@
 		<!-- Header -->
 			<header id="header" class="alt">
 				<h1><a href="index.html">Dennis</a> Evashenk</h1>
-				<nav id="nav">
+				<!--nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li>
@@ -57,9 +57,9 @@
 								</li>
 							</ul>
 						</li>
-						<li><a href="#" class="button">Sign Up</a></li>
+						<li><a href="#cta" class="button">Email Dennis</a></li>
 					</ul>
-				</nav>
+				</nav-->
 			</header>
 
 		<!-- Banner -->
@@ -67,8 +67,7 @@
 				<h2>Dennis Evashenk</h2>
 				<p>Global Experienced Specialist</p>
 				<ul class="actions">
-					<li><a href="#" class="button special">Sign Up</a></li>
-					<li><a href="#" class="button">Learn More</a></li>
+					<li><a href="#cta" class="button special">Email Dennis</a></li>
 				</ul>
 			</section>
 
@@ -115,7 +114,7 @@ Chicago Festival Association</p>
 						<section>
 							<span class="icon major fa-globe accent5"></span>
 							<h3>Languages</h3>
-							<p>English, Portuguese, & Spanish </p>
+							<p>English, Portuguese, &amp; Spanish </p>
 						</section>
 					</div>
 				</section>
@@ -150,21 +149,33 @@ Chicago Festival Association</p>
 			</section>
 			
 		<!-- CTA -->
-			<section id="cta">
+			<section id="cta" name="cta">
 				
 				<h2>Get in Contact with Dennis</h2>
 				<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
 				
-				<form>
-					<div class="row uniform 50%">
-						<div class="8u 12u(3)">
-							<input type="email" name="email" id="email" placeholder="Email Address" />
+				<form method="post" action="#">
+						<div class="row uniform 50%">
+							<div class="6u 12u(3)">
+								<input type="text" name="name" id="name" value="" placeholder="Name" />
+							</div>
+							<div class="6u 12u(3)">
+								<input type="email" name="email" id="email" value="" placeholder="Email" />
+							</div>
 						</div>
-						<div class="4u 12u(3)">
-							<input type="submit" value="Contact" class="fit" />
+						<div class="row uniform 50%">
+							<div class="12u">
+								<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+							</div>
 						</div>
-					</div>
-				</form>
+						<div class="row uniform">
+							<div class="12u">
+								<ul class="actions align-center">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
 				
 			</section>
 			
