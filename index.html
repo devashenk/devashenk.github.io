@@ -215,20 +215,47 @@ Chicago Festival Association</p>
 					  type: "POST",
 					  url: "https://mandrillapp.com/api/1.0/messages/send.json",
 					  data: {
-					    'key': 'YOUR API KEY HERE',
-					    'message': {
-					      'from_email': 'devashenk@gmail.com',
-					      'to': [
-					          {
-					            'email': 'devashenk@gmail.com',
-					            'name': formName,
-					            'type': 'to'
-					          }
+					    "key": "qdkSkLdBlBl7VrHVJpt3gA",
+					    "message": {
+					        "html": "",
+					        "text": contentForm,
+					        "subject": subject,
+					        "from_email": formEmail,
+					        "from_name": formName,
+					        "to": [
+					            {
+					                "email": "hi@dennisevashenk.com",
+					                "name": "Dennis Evashenk",
+					                "type": "to"
+					            }
 					        ],
-					      'autotext': 'true',
-					      'subject': subject,
-					      'html': contentForm
+					        "headers": {
+					            "Reply-To": "devashenk@gmail.com"
+					        },
+					        "important": false,
+					        "track_opens": null,
+					        "track_clicks": null,
+					        "auto_text": null,
+					        "auto_html": null,
+					        "inline_css": null,
+					        "url_strip_qs": null,
+					        "preserve_recipients": null,
+					        "view_content_link": null,
+					        "bcc_address": "devashenk@gmail.com",
+					        "tracking_domain": null,
+					        "signing_domain": null,
+					        "return_path_domain": null,
+					        "merge": true,
+					        "merge_language": "mailchimp",
+					        "global_merge_vars": [
+					            {
+					                "name": "merge1",
+					                "content": "merge1 content"
+					            }
+					        ]
 					    }
+					    
+					    
 					  }
 					 }).done(function(response) {
 					   console.log(response); // if you're into that sorta thing
