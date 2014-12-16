@@ -158,24 +158,24 @@ Chicago Festival Association</p>
 				<h2>Get in Contact with Dennis</h2>
 				<p>I'd love to chat. (Pro tip: ask me about the time...) </p>
 				
-				<form method="post" action="#">
+				<form>
 						<div class="row uniform 50%">
 							<div class="6u 12u(3)">
-								<input type="text" name="name" id="name" value="" placeholder="Name" />
+								<input id="nameField" type="text" name="name" id="name" value="" placeholder="Name" />
 							</div>
 							<div class="6u 12u(3)">
-								<input type="email" name="email" id="email" value="" placeholder="Email" />
+								<input id="emailField" type="email" name="email" id="email" value="" placeholder="Email" />
 							</div>
 						</div>
 						<div class="row uniform 50%">
 							<div class="12u">
-								<textarea name="message" id="message" placeholder="Start of Conversation" rows="6"></textarea>
+								<textarea id="contentField" name="message" id="message" placeholder="Start of Conversation" rows="6"></textarea>
 							</div>
 						</div>
 						<div class="row uniform">
 							<div class="12u">
 								<ul class="actions align-center">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input id="submitButton" type="button" value="Send Message" /></li>
 								</ul>
 							</div>
 						</div>
@@ -196,5 +196,44 @@ Chicago Festival Association</p>
 				</ul>
 			</footer>
 
+			<script type="text/javascript">
+			 	$("#submitButton").click(function () {
+                    
+                    var formEmail = document.getElementById("emailField").value;
+                    var formName = document.getElementById("nameField").value;
+                    var contentForm = document.getElementById("contentField").value;
+                    var subject = formName + ' with email: '+formEmail+' contacted you.';
+                    
+                    
+                    document.getElementById("emailField").value = '';
+					document.getElementById("nameField").value = '';
+					document.getElementById("contentField").value = '';
+					
+					alert("Your message has been sent successfylly");
+                    
+                    $.ajax({
+					  type: "POST",
+					  url: "https://mandrillapp.com/api/1.0/messages/send.json",
+					  data: {
+					    'key': 'YOUR API KEY HERE',
+					    'message': {
+					      'from_email': 'YOUR@EMAIL.HERE',
+					      'to': [
+					          {
+					            'email': 'YOUR@EMAIL.HER',
+					            'name': formName,
+					            'type': 'to'
+					          }
+					        ],
+					      'autotext': 'true',
+					      'subject': subject,
+					      'html': contentForm
+					    }
+					  }
+					 }).done(function(response) {
+					   console.log(response); // if you're into that sorta thing
+					 });                
+                });
+            </script>
 	</body>
 </html>
