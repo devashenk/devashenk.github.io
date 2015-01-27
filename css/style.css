@@ -563,22 +563,22 @@
 			}
 
 			.icon.major.accent2 {
-				background: #e89980;
+				background: #FB9140;
 				color: #ffffff;
 			}
 
 			.icon.major.accent3 {
-				background: #7fcdb8;
+				background: #001B48;
 				color: #ffffff;
 			}
 
 			.icon.major.accent4 {
-				background: #90b0ba;
+				background: #C9DEEC;
 				color: #ffffff;
 			}
 
 			.icon.major.accent5 {
-				background: #e5cb95;
+				background: #F23209;
 				color: #ffffff;
 			}
 
@@ -1363,7 +1363,7 @@
 /* CTA */
 
 	#cta {
-		background: #e89980;
+		background: #004F9A;
 		color: #f9e5df;
 		padding: 3.5em 0 4em 0;
 		text-align: center;
@@ -1385,7 +1385,7 @@
 		#cta .button {
 			box-shadow: none;
 			background: #fff;
-			color: #e89980;
+			color: #004F9A;
 		}
 
 		#cta input[type="text"],
