@@ -10,17 +10,22 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
+        <script src="js/jquery.flexslider.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/jquery.scrollgress.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		
 		<noscript>
+        
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
+                 
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		 <script>
@@ -31,6 +36,23 @@
   ga('create', 'UA-56368601-1', 'auto');
   ga('send', 'pageview');
 </script>
+        
+  <script type="text/javascript">
+  
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+        
+        
+       <link rel="stylesheet" href="css/flexslider.css">
+
+<script src="tweet/jquery.easy-ticker.min.js"></script>
 	</head>
 	<body class="landing">
 
@@ -65,11 +87,11 @@
 		<!-- Banner -->
 			<section id="banner">
 				<h2>Hi, I'm Dennis Evashenk</h2>
-				<p>✔ Recent DePaul University Graduate ♦ Seeking New Opportunities ♦ Management Consulting ✈ World Traveler</p>
+				<p>Global Experienced Specialist</p>
 				<ul class="actions">
 					<li><a href="#cta" class="button special">Message Dennis</a></li>
 				</ul>
-				<a target="_blank" href=http://vizualize.me/dennisevashenk?r=dennisevashenk class="button special">Hire Dennis</a>
+				<a target="_blank" href="http://vizualize.me/dennisevashenk?r=dennisevashenk" class="button special">Hire Dennis</a>
 			</section>
 
 		<!-- Main -->
@@ -77,7 +99,7 @@
 		
 				<section class="box special">
 					<header class="major">
-						<h2>Blends academic training in business management and international business with experience in nonprofit, for-profit, and public sectors through international and domestic experience.
+						<h2>Experienced in for profit, non-profit, and government work.
 
 						<br />
 						In The U.S., Brazil, Honduras, México, and Singapore.</h2>
@@ -126,28 +148,27 @@ Chicago Festival Association</p>
 				
 				</section>
 				<div class="row">
-					<div class="6u 12u(2)">
+	
+					<div class="12u">
 
-						<section class="box special">
-							<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
-							<h3>Testemonials/reccomendations/ what other’s say...Kathryn Smith Ringhofer</h3>
-							<p>"Testimonial about speaking/community"</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</section>
-						
-					</div>
-					<div class="6u 12u(2)">
+      <section class="slider box special bg-none">
+        <div class="flexslider">
+          <ul class="slides">
+            <li> 
+  	    	    <div class="slider-left"><img src="images/tst-1.png" /><h5>JOHAN CENA</h5></div>
+                <div class="slider-right"><img src="images/arrow-2.png" class="abso"/> <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+                
+                
+  	    		</li>
+  	    		<li>
+  	    	    <div class="slider-left"><img src="images/tst-2.png" /><h5>JOHAN CENA</h5></div>
+                <div class="slider-right"><img src="images/arrow-2.png" class="abso"/> <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+  	    		</li>
 
-						<section class="box special">
-							<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
-							<h3>Testemonials/reccomendations/ what other’s say..Susan Niblock</h3>
-							<p>"Testimonial"</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</section>
+  	    	
+          </ul>
+        </div>
+      </section>
 
 					</div>
 				</div>
@@ -155,12 +176,118 @@ Chicago Festival Association</p>
 			</section>
 			
 		<!-- CTA -->
-			<section id="cta" name="cta">
+			<section id="cta" name="cta" class="cta">
+<div class="twitter-block">
+    <div class="one_fourth" style="width:67%">  
+	<div id="latest_tweets_widget-2" class="footer_widget widget widget_latest_tweets_widget"><h3>Latest Tweets</h3><div class="twitter_feed" style="padding:10px;height:300px">
+								<div class="demo1 demof">
+								<ul>
+								<?php
+									require_once("class/twitteroauth/twitteroauth.php"); //Path to twitteroauth library
+									$twitteruser = "catdogwwjd";
+									$notweets = 50;
+									$consumerkey = "hAk4insMTmKU9rg8lwhU0GQMy";
+									$consumersecret = "mxfyFOyO0XEONDu5TgBYw7XUKsQlNswMEWOi5Hub9NdtK8DGei";
+									$accesstoken = "3019328697-npUCZ13MFlIot3FAiI107OfM07yT0ioQzkawiet";
+									$accesstokensecret = "3BkAAR8F1FxgPJsE9JoPnnGYcUrmXu1JgOHU3TNE1iGHa";									 
+									function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oauth_token_secret) {
+									  $connection = new TwitterOAuth($cons_key, $cons_secret, $oauth_token, $oauth_token_secret);
+									  return $connection;
+									}
+									$connection = getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
+									$tweets = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser."&count=".$notweets);
+									$arr=json_decode(json_encode($tweets), true);
+									for ($i=0;$i<count($arr);$i++)
+									{
+                                        echo '<li><div class="left"><i class="fa fa-twitter"></i></div>
+				<div class="right">'.$arr[$i]['text'].'<br>
+								</div></li>';
+										
+									}
+									?>
+									</ul>
+									</div>
+	
+<style type="text/css">
+.divider_line7
+{
+	border:none !important;
+}
+.demof{
+	border: 0px solid #ccc;
+	margin: 0px 0px 25px 0px;
+	
+}
+@media (min-width:320px) { .demof {height:250px !important;} }
+@media (min-width:481px) { .demof {height:250px !important;} }
+@media (min-width:641px) { .demof {height:250px !important;} }
+@media (min-width:961px) { .demof {height:400px !important;} }
+@media (min-width:1025px) { .demof {height:400px !important;} }
+@media (min-width:1281px)
+{
+	.demof {height:400px !important;}
+}
 
-<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/devashenk" data-widget-id="551567402526576640">Tweets by @devashenk</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+.demof ul{
+	padding: 0;
+	list-style: none;
+}
+.demof li{
+	padding: 20px;
+	border-bottom: 0px dashed #ccc;
+}
+.demof li.odd{
+	background: #fafafa;
+}
+.demof li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.demof img{
+	float: left;
+	width: 100px;
+	margin: 5px 15px 0 0;
+}
+.demof a{
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #06f;
+}
+.demof p {
+	margin: 15px 0 0;
+	font-size: 14px;
+}
+</style>
+	
+									<script>
+$(function(){
+	$('.demo1').easyTicker({
+		direction: 'up',
+		easing: 'swing',
+	speed: 'slow',
+	interval: 3000,
+	});
+});
+</script>
+
+									
+									<div class="clearfix divider_line7"></div>
+								
+				</div></div>
+    
+     <div class="clearfix"></div>
+    </div>
+    
+    
 				
-				<h2>Get in Contact with Dennis</h2>
+	</div>
+                
+                
+                
+                <div class="contact-block">
+                <h2>Get in Contact with Dennis</h2>
 				<p>I'd love to chat. (Pro tip: ask me about the time...) </p>
 				
 				<form>
@@ -185,7 +312,12 @@ Chicago Festival Association</p>
 							</div>
 						</div>
 					</form>
-				
+                    
+                 
+                    
+				</div>
+                   <div style="clear:both;"></div>
+                
 			</section>
 			
 		<!-- Footer -->
@@ -267,5 +399,97 @@ Chicago Festival Association</p>
 					 });                
                 });
             </script>
+        
+        <script>
+$(function(){
+	var $mwo = $('.marquee-with-options');
+	$('.marquee').marquee();
+	$('.marquee-with-options').marquee({
+		//speed in milliseconds of the marquee
+		speed: 5000,
+		//gap in pixels between the tickers
+		gap: 50,
+		//gap in pixels between the tickers
+		delayBeforeStart: 0,
+		//'left' or 'right'
+		direction: 'left',
+		//true or false - should the marquee be duplicated to show an effect of continues flow
+		duplicated: true,
+		//on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
+		pauseOnHover: true
+	});
+	
+	//Direction upward
+	$('.marquee-vert').marquee({
+		direction: 'up',
+		speed: 1500
+	});
+
+	//pause and resume links
+	$('.pause').click(function(e){
+		e.preventDefault();
+		$mwo.trigger('pause');
+	});
+	$('.resume').click(function(e){
+		e.preventDefault();
+		$mwo.trigger('resume');
+	});
+	//toggle
+	$('.toggle').hover(function(e){
+		$mwo.trigger('pause');
+	},function(){
+		$mwo.trigger('resume');
+	})
+	.click(function(e){
+		e.preventDefault();
+	})
+});
+</script><script>
+$(function(){
+	var $mwo = $('.marquee-with-options');
+	$('.marquee').marquee();
+	$('.marquee-with-options').marquee({
+		//speed in milliseconds of the marquee
+		speed: 5000,
+		//gap in pixels between the tickers
+		gap: 50,
+		//gap in pixels between the tickers
+		delayBeforeStart: 0,
+		//'left' or 'right'
+		direction: 'left',
+		//true or false - should the marquee be duplicated to show an effect of continues flow
+		duplicated: true,
+		//on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
+		pauseOnHover: true
+	});
+	
+	//Direction upward
+	$('.marquee-vert').marquee({
+		direction: 'up',
+		speed: 1500
+	});
+
+	//pause and resume links
+	$('.pause').click(function(e){
+		e.preventDefault();
+		$mwo.trigger('pause');
+	});
+	$('.resume').click(function(e){
+		e.preventDefault();
+		$mwo.trigger('resume');
+	});
+	//toggle
+	$('.toggle').hover(function(e){
+		$mwo.trigger('pause');
+	},function(){
+		$mwo.trigger('resume');
+	})
+	.click(function(e){
+		e.preventDefault();
+	})
+});
+</script>
+        
+        
 	</body>
 </html>
